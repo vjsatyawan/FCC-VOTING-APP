@@ -39,10 +39,13 @@ export default class HeaderTop extends Component {
                <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick}/>
            </Link>
 
-           <Link to="poll/asnkdna">
-               <Menu.Item name='pollsds' active={activeItem === 'about'} onClick={this.handleItemClick}/>
-           </Link>
+    {  1==0 ?
 
+         <Link to="poll/asnkdna">
+              <Menu.Item name='pollsds' active={activeItem === 'about'} onClick={this.handleItemClick}/>
+          </Link>
+     : ''
+    }
             <Menu.Menu>          
             <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick}>
             { this.props.currentUser ? "Hello  " : ''}

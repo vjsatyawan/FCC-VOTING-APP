@@ -1,6 +1,7 @@
 import { Grid, Modal, Header} from 'semantic-ui-react'
 import React from 'react';
 import PollItemModalForm from './PollItemModalForm.jsx';
+import ReChart from './ReChart.jsx';
 
 
 
@@ -26,7 +27,7 @@ class PollListItemModel extends React.Component {
 					            </Grid.Column>
 
 					             <Grid.Column width={8}>
-					                  Chart
+					                  <ReChart answers ={this.props.poll.answers}/>
 					             </Grid.Column>
 					          </Grid.Row>
 					         </Grid>
