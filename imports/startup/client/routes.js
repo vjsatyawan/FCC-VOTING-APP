@@ -17,8 +17,8 @@ export const renderRoutes = () => (
          <Route path = "home" component = {Home} />
          <Route path = "mypolls" component = {MyPolls} />
          <Route path = "polls" component = {AllPolls} />
-        //<Route path="/poll/:poll_id" component = {PollContainer} />
-	    <Route path = "about" component = {About} />
+         <Route path = "about" component = {About} />
+         <Route path=":pollID" component = {PollContainer} />
       </Route>
    </Router>
 );

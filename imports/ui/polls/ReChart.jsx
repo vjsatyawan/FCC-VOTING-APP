@@ -1,5 +1,5 @@
 import React from 'react';
-import {  PieChart, Pie, Sector, Cell} from 'recharts';
+import {  PieChart, Pie, Sector, Cell, Tooltip} from 'recharts';
 
 
 const data = [{name: 'Group A', value: 400}, {name: 'Group B', value: 300},
@@ -19,7 +19,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
  
   return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} 	dominantBaseline="central">
-    	Vote 1 {`${(percent * 100).toFixed(0)}%`}
+    	{`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
@@ -113,6 +113,7 @@ class ReChart extends React.Component {
 				          	data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
 				          }
 				        </Pie>
+				        <Tooltip/>
 				 
 				 </PieChart>
 
